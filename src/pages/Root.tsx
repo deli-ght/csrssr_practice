@@ -1,5 +1,10 @@
 const Root = () => {
-  return <h1>루트 페이지</h1>
+  return (
+    <section>
+      <h1>root</h1>
+      <button>about</button>
+    </section>
+  )
 }
 
 export default Root

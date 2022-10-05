@@ -1,14 +1,12 @@
+import { useRouter } from "../hooks/useRouter"
+
 const Root = () => {
-  const goAbout = () => {
-    history.pushState(undefined, "", "/about")
-    const popStateEvent = new PopStateEvent("popstate", { state: "/about" })
-    dispatchEvent(popStateEvent)
-  }
+  const { push } = useRouter()
 
   return (
     <section>
       <h1>root</h1>
-      <button onClick={goAbout}>about</button>
+      <button onClick={() => push("/about")}>about</button>
     </section>
   )
 }

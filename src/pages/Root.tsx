@@ -1,8 +1,14 @@
 const Root = () => {
+  const goAbout = () => {
+    history.pushState(undefined, "", "/about")
+    const popStateEvent = new PopStateEvent("popstate", { state: "/about" })
+    dispatchEvent(popStateEvent)
+  }
+
   return (
     <section>
       <h1>root</h1>
-      <button>about</button>
+      <button onClick={goAbout}>about</button>
     </section>
   )
 }
